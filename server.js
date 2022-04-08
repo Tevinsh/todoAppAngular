@@ -1,4 +1,4 @@
-function requireHTPS(req, res, next) {
+function requireHTTPS(req, res, next) {
     if(!res.secure && req.get('x-forwarded-proto') !== 'https') {
         return res.redirect('https://'+req.get('host') + req.url);
     }
