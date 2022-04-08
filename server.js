@@ -16,7 +16,7 @@ app.use(express.static(rootDir));
 
 app.get('/*', (req,res) => res.sendFile('index.html', {root: rootDir}));
 
-const port = process.env.PORT | 8080
+const port = process.env.PORT || 8080
 app.listen(port, () => {
     console.log(`Todoapp listening at http://localhost:${port}`)
 });
